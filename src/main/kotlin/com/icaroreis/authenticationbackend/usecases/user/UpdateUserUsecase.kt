@@ -4,7 +4,9 @@ import com.icaroreis.authenticationbackend.controller.response.UserResponse
 import com.icaroreis.authenticationbackend.exception.UpdateUserException
 import com.icaroreis.authenticationbackend.repository.UserRepository
 import jakarta.transaction.Transactional
+import org.springframework.stereotype.Service
 
+@Service
 class UpdateUserUsecase(
     private val userRepository: UserRepository
 ) {

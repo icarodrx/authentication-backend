@@ -3,7 +3,9 @@ package com.icaroreis.authenticationbackend.security.authorization
 import com.icaroreis.authenticationbackend.exception.ForbiddenException
 import com.icaroreis.authenticationbackend.exception.PermissionValidatorException
 import com.icaroreis.authenticationbackend.security.filter.ContextHolder
+import org.springframework.stereotype.Component
 
+@Component
 class PermissionValidator(
     val contextHolder: ContextHolder
 ) {
