@@ -1,4 +1,4 @@
-package com.icaroreis.authenticationbackend.security.authorization
+package com.icaroreis.authenticationbackend.security.jwt
 
 import io.jsonwebtoken.io.Decoders
 import io.jsonwebtoken.security.Keys
