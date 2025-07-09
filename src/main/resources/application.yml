@@ -11,8 +11,6 @@ spring:
     properties:
       hibernate:
         format_sql: true
-  flyway:
-    enabled: true
   mail:
     host: smtp.gmail.com
     port: 587
@@ -34,14 +32,6 @@ jwt:
   expiration: 3600000
   type: Bearer
 
-logging:
-  level:
-    org.springframework.transaction: TRACE
-    org.hibernate.engine.transaction.internal: DEBUG
-    org.hibernate.resource.transaction.backend.jdbc.internal: DEBUG
-    org.hibernate.engine.jdbc.connections.internal.JdbcConnectionAccessImpl: DEBUG
-    org.hibernate.type.descriptor.sql: TRACE
-
 app:
   frontend:
-    url: http://localhost:5173
+    url: ${FRONTEND_URL}

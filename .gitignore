@@ -32,6 +32,9 @@ build/
 ### VS Code ###
 .vscode/
 
-#Terraform
+### Terraform ###
 /terraform/.terraform/
 /terraform/.terraform.lock.hcl
+
+### Environment Variables ###
+.env
