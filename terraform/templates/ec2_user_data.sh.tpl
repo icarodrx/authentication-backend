@@ -20,12 +20,7 @@ cd ${project_name}
 
 # Get secrets from AWS
 SECRETS_JSON=$(aws secretsmanager get-secret-value --secret-id prd/authentication-backend/secrets --query SecretString --output text --region us-east-1)
-cat <<EOF > .env
-POSTGRES_DB_USER=$(echo $SECRETS_JSON | jq -r '.POSTGRES_DB_USER')
-POSTGRES_DB_PASSWORD=$(echo $SECRETS_JSON | jq -r '.POSTGRES_DB_PASSWORD')
-SMTP_PASSWORD=$(echo $SECRETS_JSON | jq -r '.SMTP_PASSWORD')
-JWT_SECRET=$(echo $SECRETS_JSON | jq -r '.JWT_SECRET')
-FRONTEND_URL=$(echo $SECRETS_JSON | jq -r '.FRONTEND_URL')
-EOF
+echo "" > .env
+echo "$SECRETS_JSON" | jq -r 'keys[] as $k | "\($k)=\(.[$k])"' >> .env
 
 docker compose up -d
