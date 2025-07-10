@@ -1,6 +1,6 @@
 <div id="top">
 
-<img src="logo.png" width="10%" align="left" style="margin-right: 15px">
+<img src="src/main/resources/assets/logo.png" width="10%" align="left" style="margin-right: 15px">
 
 <h1 style="border-bottom: none;">authentication-backend</h1>
 
