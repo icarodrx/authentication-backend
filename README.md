@@ -1,22 +1,20 @@
-<div id="top" style="text-align: center;">
+<p align="center">
+  <img src="src/main/resources/assets/logo.png" width="100" alt="Project Logo" />
+</p>
 
-  <img src="logo.png" width="10%" style="margin-bottom: 10px;" alt="Project Logo" />
+<h1 align="center">authentication-backend</h1>
 
-  <h1>authentication-backend</h1>
+<p align="center">
+  <img src="https://img.shields.io/github/languages/top/icarodrx/authentication-backend?style=default&color=0080ff" alt="Top Language Badge" />
+  <img src="https://img.shields.io/github/languages/count/icarodrx/authentication-backend?style=default&color=0080ff" alt="Languages Count Badge" />
+</p>
 
-  <div style="margin: 10px 0;">
-    <img src="https://img.shields.io/github/languages/top/icarodrx/authentication-backend?style=default&color=0080ff" alt="Top Language Badge" />
-    <img src="https://img.shields.io/github/languages/count/icarodrx/authentication-backend?style=default&color=0080ff" alt="Languages Count Badge" />
-  </div>
-
-  <div style="margin: 10px 0;">
-    <img src="https://img.shields.io/badge/Kotlin-0095D5?style=flat&logo=kotlin&logoColor=white" alt="Kotlin Badge" />
-    <img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat&logo=spring-boot&logoColor=white" alt="Spring Boot Badge" />
-    <img src="https://img.shields.io/badge/Apache_Maven-CC3636?style=flat&logo=apache-maven&logoColor=white" alt="Apache Maven Badge" />
-    <img src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white" alt="Docker Badge" />
-  </div>
-
-</div>
+<p align="center">
+  <img src="https://img.shields.io/badge/Kotlin-0095D5?style=flat&logo=kotlin&logoColor=white" alt="Kotlin Badge" />
+  <img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat&logo=spring-boot&logoColor=white" alt="Spring Boot Badge" />
+  <img src="https://img.shields.io/badge/Apache_Maven-CC3636?style=flat&logo=apache-maven&logoColor=white" alt="Apache Maven Badge" />
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white" alt="Docker Badge" />
+</p>
 
 ## Table of Contents
 
@@ -25,9 +23,9 @@
 3. [Demo](#demo)
 4. [Project Structure](#project-structure)
 5. [Getting Started](#getting-started)
-   - 5.1. [Prerequisites](#prerequisites)
-   - 5.2. [Installation](#installation)
-   - 5.3. [Usage](#usage)
+    - 5.1. [Prerequisites](#prerequisites)
+    - 5.2. [Installation](#installation)
+    - 5.3. [Usage](#usage)
 
 ## Overview
 
@@ -145,11 +143,11 @@ Start the project using Docker:
 docker compose up -d
 ```
 
-<div style="text-align: right;">
-
-[![][back-to-top]](#top)
-
-</div>
+<p align="right">
+  <a href="#top">
+    <img src="https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square" alt="Back to Top" />
+  </a>
+</p>
 
 [back-to-top]: https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square
 
