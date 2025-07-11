@@ -11,8 +11,8 @@ data class ResetPasswordRequest(
     @field:NotBlank(message = "New password cannot be empty")
     @field:Size(min = 10, message = "New password must be at least 10 characters long")
     @field:Pattern(
-        regexp = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–[{}]:;',?/*~$^+=<>]).*$",
-        message = "New password must contain at least one digit, one lowercase, one uppercase, and one special character"
+        regexp = "^(?=.*[0-9])(?=.*[a-zA-Z]).{8,}$",
+        message = "Password must contain at least one digit and one character"
     )
     val newPassword: String
 )
