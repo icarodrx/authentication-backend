@@ -1,23 +1,22 @@
-<div id="top">
+<div id="top" style="text-align: center;">
 
-<img src="src/main/resources/assets/logo.png" width="10%" align="left" style="margin-right: 15px">
+  <img src="logo.png" width="10%" style="margin-bottom: 10px;" alt="Project Logo" />
 
-<h1 style="border-bottom: none;">authentication-backend</h1>
+  <h1>authentication-backend</h1>
 
-<em></em>
+  <div style="margin: 10px 0;">
+    <img src="https://img.shields.io/github/languages/top/icarodrx/authentication-backend?style=default&color=0080ff" alt="Top Language Badge" />
+    <img src="https://img.shields.io/github/languages/count/icarodrx/authentication-backend?style=default&color=0080ff" alt="Languages Count Badge" />
+  </div>
 
-<img src="https://img.shields.io/github/last-commit/icarodrx/authentication-backend?style=default&logo=git&logoColor=white&color=0080ff" alt="last-commit">
-<img src="https://img.shields.io/github/languages/top/icarodrx/authentication-backend?style=default&color=0080ff" alt="repo-top-language">
-<img src="https://img.shields.io/github/languages/count/icarodrx/authentication-backend?style=default&color=0080ff" alt="repo-language-count">
+  <div style="margin: 10px 0;">
+    <img src="https://img.shields.io/badge/Kotlin-0095D5?style=flat&logo=kotlin&logoColor=white" alt="Kotlin Badge" />
+    <img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat&logo=spring-boot&logoColor=white" alt="Spring Boot Badge" />
+    <img src="https://img.shields.io/badge/Apache_Maven-CC3636?style=flat&logo=apache-maven&logoColor=white" alt="Apache Maven Badge" />
+    <img src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white" alt="Docker Badge" />
+  </div>
 
-<em></em>
-
-<img src="https://img.shields.io/badge/Kotlin-0095D5?style=flat&logo=kotlin&logoColor=white" alt="kotlin-badge" />
-<img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat&logo=spring-boot&logoColor=white" alt="spring-boot-badge" />
-<img src="https://img.shields.io/badge/Apache_Maven-CC3636?style=flat&logo=apache-maven&logoColor=white" alt="maven-badge" />
-<img src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white" alt="docker-badge" />
-
-<br/>
+</div>
 
 ## Table of Contents
 
@@ -26,32 +25,28 @@
 3. [Demo](#demo)
 4. [Project Structure](#project-structure)
 5. [Getting Started](#getting-started)
-    - 5.1. [Prerequisites](#prerequisites)
-    - 5.2. [Installation](#installation)
-    - 5.3. [Usage](#usage)
-
----
+   - 5.1. [Prerequisites](#prerequisites)
+   - 5.2. [Installation](#installation)
+   - 5.3. [Usage](#usage)
 
 ## Overview
 
-This repository hosts authentication-backend, a Kotlin Spring Boot application designed to function as the core backend for a web-based authentication system. You can access the deployed system at {URL}.
+This repository hosts **authentication-backend**, a Kotlin Spring Boot application designed as the core backend for a web-based authentication system. You can access the deployed system at the following URL:
 
-This project was developed primarily for learning purposes, demonstrating fundamental authentication functionalities. It includes:
+http://authenticationsystem.s3-website-us-east-1.amazonaws.com/login
 
-- <strong>User Registration:</strong> Create new user accounts.
-- <strong>Forgot Password Flow:</strong> An email-driven process to reset user passwords.
-- <strong>User Login:</strong> Secure authentication for existing users.
-- <strong>Protected Resources:</strong> Endpoints that provide access to user-specific information, requiring successful authentication.
+This project was developed primarily for learning purposes and demonstrates fundamental authentication functionalities, including:
 
-The application leverages a PostgreSQL relational database for all its data persistence.
+- **User Registration:** Create new user accounts.
+- **Forgot Password Flow:** Email-driven process to reset user passwords.
+- **User Login:** Secure authentication for existing users.
+- **Protected Resources:** Endpoints requiring successful authentication to access user-specific data.
 
----
+The application uses a PostgreSQL database for persistent storage.
 
 ## Demo
 
-insert-video-here
-
----
+[![Demo Video](https://img.youtube.com/vi/S3Psf9_8ppA/0.jpg)](https://www.youtube.com/watch?v=S3Psf9_8ppA)
 
 ## Project Structure
 
@@ -64,8 +59,8 @@ insert-video-here
     ├── pom.xml
     └── src
         ├── main
-        │   ├── kotlin.com.icaroreis
-        │   │   └── authenticationbackend
+        │   ├── kotlin
+        │   │   └── com.icaroreis.authenticationbackend
         │   │       ├── AuthenticationBackendApplication.kt
         │   │       ├── config
         │   │       ├── controller
@@ -82,7 +77,7 @@ insert-video-here
 
 ### Prerequisites
 
-This project requires the following dependencies:
+This project requires:
 
 - **Programming Language:** Kotlin
 - **Package Manager:** Maven
@@ -90,66 +85,67 @@ This project requires the following dependencies:
 
 ### Installation
 
-Build authentication-backend from the source and install dependencies:
+To build the project and install dependencies:
 
 1. **Clone the repository:**
 
-   ```sh
-   ❯ git clone https://github.com/icarodrx/authentication-backend
-   ```
+```sh
+git clone https://github.com/icarodrx/authentication-backend
+```
 
 2. **Navigate to the project directory:**
 
-   ```sh
-   ❯ cd authentication-backend
-   ```
+```sh
+cd authentication-backend
+```
 
 3. **Configure Environment Variables:**
 
-   You'll need to create a .env file in the application's root directory to provide the necessary environment variables. Use the provided .env.example file as a template:
+Create a `.env` file in the root directory using `.env.example` as a reference:
 
-   ```sh
-   POSTGRES_DB_USER=insert-db-user
-   POSTGRES_DB_PASSWORD=insert-db-password
-   SMTP_PASSWORD=insert-smtp-password
-   JWT_SECRET=insert-jwt-secret
-   ```
+```env
+POSTGRES_DB_USER=insert-db-user
+POSTGRES_DB_PASSWORD=insert-db-password
+SMTP_PASSWORD=insert-smtp-password
+JWT_SECRET=insert-jwt-secret
+```
 
-   Here's a breakdown of each variable:
+#### Explanation:
 
-    - POSTGRES_DB_USER and POSTGRES_DB_PASSWORD: These values will automatically serve as the credentials for your PostgreSQL database connection.
-    - JWT_SECRET: This should be a long, securely encoded string. It's crucial for encoding and decoding JSON Web Tokens (JWTs) used in the application.
-    - SMTP_PASSWORD: This is the application-specific password for your email server, required for sending "forgot password" emails. If this value is missing or invalid, the password reset emails won't be sent, but the application will still run.
+- `POSTGRES_DB_USER` and `POSTGRES_DB_PASSWORD`: Credentials for your PostgreSQL database.
+- `JWT_SECRET`: A long, secure key for encoding/decoding JWTs.
+- `SMTP_PASSWORD`: Email provider password for sending reset emails.  
+  If omitted or invalid, the app still runs but password reset won't function.
 
-   For email functionality to work correctly, ensure the following mail block in application.yml is also completely filled out:
+Also, ensure the following block is correctly set in `application.yml`:
 
-   ```sh
-   mail:
-   	host: insert-email-host
-   	port: insert-port
-   	username: insert-username
-   	password: ${SMTP_PASSWORD}
-   	properties:
-   		mail:
-   			smtp:
-   				auth: true
-   				starttls:
-   					enable: true
-   					required: true
-   				connectiontimeout: 5000
-   				timeout: 5000
-   				writetimeout: 5000
-   ```
+```yaml
+mail:
+  host: insert-email-host
+  port: insert-port
+  username: insert-username
+  password: ${SMTP_PASSWORD}
+  properties:
+    mail:
+      smtp:
+        auth: true
+        starttls:
+          enable: true
+          required: true
+        connectiontimeout: 5000
+        timeout: 5000
+        writetimeout: 5000
+```
 
 ### Usage
 
-Run the project with:
+Start the project using Docker:
 
 ```sh
-❯ docker compose up -d
+docker compose up -d
 ```
 
-<div align="right">
+<div style="text-align: right;">
 
 [![][back-to-top]](#top)
 
